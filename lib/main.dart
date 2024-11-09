@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:messageme_app/WelcomeScreen.dart';
+import 'package:messageme_app/Screens/WelcomeScreen.dart';
 
 void main(){
 
