@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:messageme_app/Screens/LoginScreen.dart';
-import 'package:messageme_app/Screens/RegisterScreen.dart';
-import 'package:messageme_app/Screens/WelcomeScreen.dart';
+import 'package:messageme_app/Screens/SignScreen.dart';
 
-void main(){
+import 'Screens/ChatScreen.dart';
+import 'Screens/RegisterScreen.dart';
+import 'Screens/WelcomeScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -17,7 +21,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Loginscreen(),
+
+     initialRoute: Welcomescreen.routeName,
+      routes: {
+        Welcomescreen.routeName:(context)=>Welcomescreen(),
+        Registerscreen.routeName:(context)=>Registerscreen(),
+        Signscreen  .routeName:(context)=>Signscreen(),
+        ChatScreen.routeName:(context)=>ChatScreen(),
+      },
     );
   }
 }
