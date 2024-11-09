@@ -35,6 +35,7 @@ class _WelcomescreenState extends State<Welcomescreen> {
             ),
             SizedBox(height: 20 ,),
            Button(title: "Sign In",onpressed: (){},color: Color(0xffe9c45c)),
+            SizedBox(height: 30,),
             Button(title: "Register",onpressed: (){}, color: Color(0xff995eea), )
 
           ],
